@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { evaluatePlantHealth } from './utils.js';
+import { evaluatePlantHealth, getPlantHealthText } from './utils.js';
 
 const button = document.getElementById('water-button');
 const div = document.getElementById('health');
@@ -21,10 +21,8 @@ button.addEventListener('click', () => {
     image.src = `./assets/${plantHealth}.png`;
     // - We change the text according to the new state
 
-    let healthString = 'Your plant is drowining!';
-    
-    if (plantHealth === 'dry') healthString = 'Your plant needs water!';
-    else if (plantHealth === 'healthy') healthString = 'Your plant is a-ok!';
+    let healthString = getPlantHealthText(plantHealth);
 
     div.textContent = healthString;
 });
+
