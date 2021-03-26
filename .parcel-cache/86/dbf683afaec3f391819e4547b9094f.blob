@@ -1,0 +1,19 @@
+var _utils = require('./utils');
+const button = document.getElementById('water-button');
+const div = document.getElementById('health');
+const image = document.getElementById('plant-image');
+// initialize state
+// state should usually be a "real world" thing that we're representing in code.
+let moistureLevel = 1;
+// set event listeners to update state and DOM
+button.addEventListener('click', () => {
+  // - We need to incremenet the moisture level state
+  moistureLevel++;
+  // three options: 'dry', 'healthy', 'overwatered'
+  const plantHealth = _utils.evaluatePlantHealth(moistureLevel);
+  // - We change the image according to the new state
+  image.src = `./assets/${plantHealth}.png`;
+  // - We change the text according to the new state
+  let healthString = _utils.getPlantHealthText(plantHealth);
+  div.textContent = healthString;
+});

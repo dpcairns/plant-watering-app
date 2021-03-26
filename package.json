@@ -1,0 +1,28 @@
+{
+  "name": "plant-watering-app",
+  "version": "1.0.0",
+  "description": "1) Make a drawing of your app. Simple \"wireframes\" 2) Once you have a drawing, name the HTML elements you'll need to realize your vision 3) For each HTML element ask: Why do I need this?     - This is your pseudocode 4) Once we know _why_ we need each element, think about how to implement the \"Why\" as a \"How\" 5) Find all the 'events' (user clicks, form submit, etc) in your app. Ask one by one, \"What happens when\" for each of these events. 6) Think about how to validate each of your steps",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "parcel serve src/*.html --open",
+    "test": "parcel serve src/test/*.html --open",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpcairns/plant-watering-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpcairns/plant-watering-app/issues"
+  },
+  "homepage": "https://github.com/dpcairns/plant-watering-app#readme",
+  "dependencies": {
+    "@types/qunit": "^2.11.1",
+    "parcel": "^2.0.0-beta.2"
+  }
+}

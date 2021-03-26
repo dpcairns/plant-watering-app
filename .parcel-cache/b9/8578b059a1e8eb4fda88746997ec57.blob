@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tests</title>
+  <link rel="stylesheet" href="6cd5a20f00aae5fc594491e4f9a5c0ec">
+</head>
+
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="f4ad1d5cc47771b46614243e04346615"></script>
+  <script data-parcel-key="852ea096a55bd22bfacd17b76eece8c1">
+    function storageMock() {
+      var storage = {};
+
+      return {
+        setItem: function (key, value) {
+          storage[key] = value || '';
+        },
+        getItem: function (key) {
+          return key in storage ? storage[key] : null;
+        },
+        removeItem: function (key) {
+          delete storage[key];
+        },
+        get length() {
+          return Object.keys(storage).length;
+        },
+        key: function (i) {
+          var keys = Object.keys(storage);
+          return keys[i] || null;
+        }
+      };
+    }
+
+    Object.defineProperty(window, 'localStorage', {
+      value: storageMock(),
+    });</script>
+
+  <script type="module" src="27bed202cda4268ed45ec132abbdad2b"></script>
+</body>
+
+</html>

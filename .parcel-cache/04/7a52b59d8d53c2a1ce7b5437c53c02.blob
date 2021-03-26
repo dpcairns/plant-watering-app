@@ -1,0 +1,22 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "evaluatePlantHealth", function () {
+  return evaluatePlantHealth;
+});
+_parcelHelpers.export(exports, "getPlantHealthText", function () {
+  return getPlantHealthText;
+});
+const mysteryThing = {
+  quantity: 5,
+  id: 'apple'
+};
+function evaluatePlantHealth(moistureLevel) {
+  if (moistureLevel < 4) return 'dry';
+  if (moistureLevel > 8) return 'overwatered';
+  return 'healthy';
+}
+function getPlantHealthText(plantHealth) {
+  if (plantHealth === 'dry') return 'Your plant needs water!';
+  if (plantHealth === 'healthy') return 'Your plant is a-ok!';
+  return 'Your plant is drowining!';
+}
